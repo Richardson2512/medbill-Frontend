@@ -16,11 +16,11 @@ AI-powered mobile application for scanning and analyzing US medical bills. Compa
 ## Tech Stack
 
 ### Mobile App (React Native)
-- React Native 0.73+
+- React Native with Expo SDK 51
 - TypeScript
 - React Navigation
 - React Native Paper (UI components)
-- React Native Vision Camera
+- Expo Camera & Image Picker
 - React Query + Zustand
 - OpenAI GPT-4V API
 
@@ -49,65 +49,35 @@ medical-bill-scanner/
 └── docs/                 # Documentation
 ```
 
-## Setup Instructions
+## Quick Start
 
 ### Prerequisites
 
 - Node.js >= 18
-- React Native development environment (see [React Native docs](https://reactnative.dev/docs/environment-setup))
-- iOS: Xcode and CocoaPods
-- Android: Android Studio and Android SDK
+- Expo CLI (installed via npm)
 - OpenAI API key
 
-### Mobile App Setup
+### Installation
 
 1. Install dependencies:
 ```bash
-npm install
-# or
-yarn install
-```
-
-2. iOS setup:
-```bash
-cd ios && pod install && cd ..
-```
-
-3. Configure environment variables:
-```bash
-cp .env.example .env
-# Edit .env and add your OPENAI_API_KEY
-```
-
-4. Run the app:
-```bash
-# iOS
-npm run ios
-
-# Android
-npm run android
-```
-
-### Backend API Setup
-
-1. Navigate to API directory:
-```bash
-cd api
 npm install
 ```
 
 2. Configure environment variables:
 ```bash
-cp ../.env.example .env
-# Edit .env with your configuration
+cp .env.example .env
+# Edit .env and add your OPENAI_API_KEY
 ```
 
-3. Start the server:
+3. Start the development server:
 ```bash
-npm run dev  # Development mode with nodemon
-# or
-npm start    # Production mode
+npm run start:dev
 ```
+
+### Development Build Setup
+
+For production-grade testing with development builds, see [DEVELOPMENT_BUILD_SETUP.md](./DEVELOPMENT_BUILD_SETUP.md)
 
 ## API Endpoints
 
@@ -127,11 +97,12 @@ Note: Private insurance typically pays 120-200% of Medicare rates, so charges ab
 ## Development Phases
 
 ### Phase 1: MVP ✅
-- React Native app setup
+- React Native app setup with Expo
 - Camera integration
 - GPT-4V bill parsing
 - Basic Medicare rate comparison (top 100 CPT codes)
 - Color-coded flag system
+- Development build support
 
 ### Phase 2: Enhanced Analysis (Planned)
 - Comprehensive Medicare locality database (all states)
@@ -163,6 +134,12 @@ This app processes Protected Health Information (PHI). Ensure:
 - Database hosting: ~$25-50/month
 - Total: ~$100-200/month + API usage
 
+## Documentation
+
+- [Setup Guide](./SETUP_GUIDE.md) - Detailed setup instructions
+- [Development Build Setup](./DEVELOPMENT_BUILD_SETUP.md) - Expo development build guide
+- [Project Summary](./PROJECT_SUMMARY.md) - Complete project status
+
 ## License
 
 [Add your license here]
@@ -171,3 +148,15 @@ This app processes Protected Health Information (PHI). Ensure:
 
 For issues and questions, please open an issue on GitHub.
 
+---
+
+# Product Requirements Document
+
+See the full PRD below for complete feature specifications, technical architecture, and development guidelines.
+
+<details>
+<summary>Click to expand full PRD</summary>
+
+[The full PRD content would go here - it's very long, so keeping it collapsed]
+
+</details>
