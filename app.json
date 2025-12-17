@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Medical Bill Scanner",
+    "slug": "medical-bill-scanner",
+    "scheme": "medicalbillscanner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      "expo-dev-client",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Medical Bill Scanner to access your camera to scan medical bills."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Medical Bill Scanner to access your photos to import bill images."
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yourorg.medicalbillscanner",
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need camera access to scan medical bills.",
+        "NSPhotoLibraryUsageDescription": "We need access to your photo library to import bill images."
+      }
+    },
+    "android": {
+      "package": "com.yourorg.medicalbillscanner",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "REPLACE_WITH_EAS_PROJECT_ID"
+      }
+    }
+  }
+}
+
